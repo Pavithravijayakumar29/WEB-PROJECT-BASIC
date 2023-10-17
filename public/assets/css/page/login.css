@@ -1,0 +1,79 @@
+body {
+    background-image: url("{!! asset('assets/img/login_img.jpg') !!}");
+    opacity: 0.9;
+    background-color: rgba(24, 173, 231, 0.89);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+
+.login-container {
+    max-width: 400px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+}
+
+.card {
+    background-image: url("{!! asset('assets/img/card_img.jpg') !!}");
+    background-size: cover;
+    border-color: #7c6519;
+    backdrop-filter: saturate(160%) blur(10px);
+    border-radius: 16px;
+    top: 10px;
+    right: 10px;
+
+}
+
+form .input_box {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+}
+
+.input_box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 45px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.input_box .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: rgb(22, 3, 3);
+}
+
+.form-group button:hover {
+    background-color: #fda500;
+    color: #300600;
+
+}
+
+/* input[type=text]:focus {
+border: 3px solid #2c0600;
+}
+input[type=password]:focus {
+border: 3px solid #2c0600;
+} */
+
+.btn {
+    color: white;
+    background-color: #300600;
+}
+
+.alert-danger {
+    color: #f50119;
+    background-color: #ffffff;
+    border-color: #fa0019;
+}

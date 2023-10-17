@@ -1,0 +1,109 @@
+body{
+	background-color: white !important;
+}
+
+.login-form{
+	height:37px !important;
+}
+.log_logo .punchline {
+	color: #777575;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.25px;
+}
+.login-form {
+	border-top-color: white !important;
+	border-left-color: white !important;
+	border-right-color: white !important;
+	border-bottom: 2px solid #0aa699 !important;
+}
+
+.top-section {
+	margin-top: 80px;
+
+}
+
+.login-conatiner{
+    width: 60%;
+    margin: 0 auto;
+}
+.logo-st{
+	height: 75px;
+	margin-left: -20px;
+}
+
+
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.green{
+	color: white !important; 
+ 	background: #0aa699; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(left top, #0aa699, #0ef1de); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(bottom right, #0aa699, #0ef1de); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(bottom right, #0aa699, #0ef1de); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to bottom right, #0aa699, #0ef1de); /* Standard syntax */
+}
+
+.intro-div {
+	padding-top: 100px;
+    padding-bottom: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: white !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+.intro-div h2, .intro-div h5, .intro-div h3{
+color: white !important;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+	.green-div{
+	 display: none;
+	}
+   
+
+.check-success label{
+	font-size: 7px;
+}
+
+
+}
+
+
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.intro-text{
+	text-align: center;
+}
+/*=====Login============================================================================================================*/

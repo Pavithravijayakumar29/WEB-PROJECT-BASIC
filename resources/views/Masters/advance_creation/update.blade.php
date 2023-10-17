@@ -1,0 +1,91 @@
+<style>
+    .theme-white .btn-primary {
+    background-color: #136d0b;
+    border-color: transparent !important;
+    color: #fff;
+}
+.btn-secondary, .btn-secondary.disabled {
+    box-shadow: 0 2px 6px #a5baca;
+    background-color: #f30707;
+    border-color: #cdd3d8;
+    color: #fff;
+}
+</style>
+
+<form onsubmit="return validateForm()" action="javascript:insert_update_row('<?php echo $advance_creation['id']; ?>',date.value,adv_no.value,staff_id.value,amount.value,payment.value,description.value)">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="stl">Date</label><label style="color:red">*</label>
+                <input type="date" id="date" class="form-control" value="<?php echo $advance_creation['entry_date']; ?>">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="stl">Advance No</label><label style="color:red">*</label>
+                <input type="text" id="adv_no" class="form-control" value="<?php echo $advance_creation['advance_no']; ?>" readonly>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="stl">Staff Name</label><label style="color:red">*</label>
+                <select class="form-control" id="staff_id" width="100%">
+                    <option >--Select--</option>
+                    <?php
+                     $staff_name=$advance_creation['staff_id'];
+
+                    foreach($state_name as $state_name1){ ?>
+                    <option value="<?php echo $state_name1['id']; ?>"<?php  if ($staff_name==$state_name1['id']){echo " selected";}?>><?php echo $state_name1['sales_ref_name']; ?></option>
+                    <?php } ?>
+                </select>
+                <p id="error_message_1" style="color: red; display: none;">Please Select Staff Name</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="stl">Amount</label><label style="color:red">*</label>
+                <input type="text" id="amount" class="form-control" value="<?php echo $advance_creation['amount']; ?>" >
+                <p id="error_message_2" style="color: red; display: none;">Please Enter Amount</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="stl">Mode Of Payment</label><label style="color:red">*</label>
+                <select class="form-control" id="payment" width="100%" >
+
+                    <option value="">--Select--</option>
+                    <option value="Cash" <?php if($advance_creation['cash_type']=='Cash'){echo 'selected';} ?>>Cash</option>
+                    <option value="neft" <?php if($advance_creation['cash_type']=='neft'){echo 'selected';} ?>>NEFT</option>
+
+                </select>
+                <p id="error_message_3" style="color: red; display: none;">Please Select Mode Of Payment</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="description" class="stl">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="4"><?php echo $advance_creation['description']; ?></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-icon icon-left btn-danger" data-dismiss="modal" aria-label="Close">
+            <span class="fas fa-times"></span>Cancel
+          </button>
+        </div>
+        <div class="col-md-6 text-right">
+          <button class="btn btn-icon icon-left btn-success" type="submit">
+            <span class="fas fa-check"></span>Update
+          </button>
+        </div>
+      </div>
+</form>
+{{-- <script>
+    $(document).ready(function() {
+   console.log("Document ready!");
+   $('#staff_id').select2();
+ });
+   </script> --}}
